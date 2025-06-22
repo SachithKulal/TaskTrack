@@ -26,7 +26,18 @@ function App() {
     });
   }
 
+<<<<<<< HEAD
   function handleDeleteTask() {}
+=======
+  function handleDeleteTask(taskId) {
+    setProjects((prev) => {
+      return {
+        ...prev,
+        tasks: prev.tasks.filter((task) => task.id !== taskId),
+      };
+    });
+  }
+>>>>>>> 67b7e09 (final changes)
 
   const handleSelectProject = (id) => {
     setProjects((prev) => {
@@ -92,7 +103,13 @@ function App() {
       onDelete={handleDeleteFunction}
       onAddTask={handleAddTask}
       onDeleteTask={handleDeleteTask}
+<<<<<<< HEAD
       tasks={projects.tasks}
+=======
+      tasks={projects.tasks.filter(
+        (task) => task.projectId === projects.selectedProjectId
+      )}
+>>>>>>> 67b7e09 (final changes)
     />
   );
 
@@ -110,6 +127,10 @@ function App() {
         onStartAddProject={handleStartAddProject}
         projectList={projects.projectList}
         onSelectProject={handleSelectProject}
+<<<<<<< HEAD
+=======
+        selectedProjectId={projects.projectId}
+>>>>>>> 67b7e09 (final changes)
       />
       {content}
     </main>
