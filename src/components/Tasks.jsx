@@ -12,16 +12,6 @@ export const Tasks = ({ tasks, onAddTask, onDeleteTask }) => {
       )}
       {tasks.length > 0 && (
         <ul className="p-4 mt-8 rounded-md bg-stone-100">
-<<<<<<< HEAD
-          {tasks.map((task) => {
-            <li key={task.id} className="flex justify-between my-4">
-              <span>{task.text}</span>
-              <button className="text-stone-700 hover:text-red-500">
-                Clear
-              </button>
-            </li>;
-          })}
-=======
           {tasks.map((task) => (
             <li key={task.id} className="flex justify-between my-4">
               <span className="text-stone-700">{task.text}</span>
@@ -33,7 +23,6 @@ export const Tasks = ({ tasks, onAddTask, onDeleteTask }) => {
               </button>
             </li>
           ))}
->>>>>>> 67b7e09 (final changes)
         </ul>
       )}
     </section>
